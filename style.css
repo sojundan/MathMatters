@@ -1,0 +1,65 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color:#C0C0C0;
+  font-family: 'Veranda', sans-serif;
+  font-color: #404040;
+  font-size: 125%;
+  margin: 5em;
+}
+
+h1 {
+  font-size:300%;
+  text-align: center;
+  border: 4px double black;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+h2 {
+  font-size:150%;
+  text-align: center;
+  margin: 10em;
+  borders: 0px;
+}
+
+h3 {
+  font-size:100%;
+}
+
+#headings {
+  color: #FFFF00;
+  font-size: 150%;
+  text-align: left;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-left {
+  text-align: left;
+}
+
+#affirmations {
+  width: 250px;
+  border: 4px double black;
+  float: right;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  padding: 1%;
+  text-align: center;
+  background-color: #FFF9C4;
+}
+
+table {
+  border: 4px double black;
+  border-spacing: 5pt;
+  display: center;
+  margin: auto;
+}
