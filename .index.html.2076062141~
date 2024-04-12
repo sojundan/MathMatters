@@ -14,8 +14,7 @@
     <div id="cursive"
       <h1 class="center" >Math Matters <br>
       Ms. Kronowitz's Math Class</h1>
-    </div>
-    <br>
+
     <div id="affirmations">
       <h3> Click the image below for a Possitive Affirmation!</h3>
       <button type="button" onclick="buttonclicked()">

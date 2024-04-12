@@ -23,7 +23,7 @@ h2 {
   font-size:150%;
   text-align: center;
   margin: 10em;
-  borders: 0px;
+  border: 0px;
 }
 
 h3 {
@@ -45,6 +45,17 @@ h3 {
 .text-left {
   text-align: left;
 }
+
+#cursive {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 350%;
+  text-align: center;
+  border: 4px double black;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+
 
 #affirmations {
   width: 250px;
