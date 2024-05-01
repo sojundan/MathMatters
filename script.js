@@ -62,7 +62,7 @@ var formData = {
 
 var formJSON = JSON.stringify(formData);
 console.log("formJSON: " + formJSON);
-  db.collection("forms").doc(formData.timestamp).set(formData);
+  db.collection("forms").doc(formData.Last_Name).set(formData);
 return formData;
 };
 
@@ -70,7 +70,7 @@ function saveForm() {
   console.log("saveForm() called");
 
   var formData = createForm();
-  db.collection("forms").doc(formData.timestamp).set(formData);
+  db.collection("forms").doc(formData.Last_Name).set(formData);
   alert("Thank you for your submission!");
 }
 
