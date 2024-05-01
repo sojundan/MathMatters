@@ -71,9 +71,9 @@
           <label for="Last_Name">Last Name:</label>
           <input type="text" name="Last_Name" id="Last_Name" required><br><br>
           <label for="Class_Period">Class Period:</label><br>
-          <input type="radio" name="Class_Period" id="ClassPeriod" value="1">Period 1/2<br/>
-          <input type="radio" name="Class_Period" id="Class_Period" value="2" checked>Period 3/4<br/>
-          <input type="radio" name="Class_Period" id= "Class-Period" value="3">Period 8/9<br/>
+          <input type="radio" name="Class_Period" id="1_2" value="1">Period 1/2<br/>
+          <input type="radio" name="3_4" id="Class_Period" value="2" checked>Period 3/4<br/>
+          <input type="radio" name="Class_Period" id= "8_9" value="3">Period 8/9<br/>
           <br><br>
           <label for="Email">Email:</label>
           <input type="Email" name="Email" id="Email" autofocus required> <br><br><br>
@@ -85,28 +85,28 @@
           <br>
 
           <label>Please tell me what you need from me:</label><br>
-          <input type="checkbox" name="needs" value="Different_Seat">Different Seat<br/>
-          <input type="checkbox" name="needs" 
+          <input type="checkbox" name="needs" id="seat" value="Different_Seat">Different Seat<br/>
+          <input type="checkbox" name="needs" id="HW"
                value="Homework_Help">Homework Help<br/>
-          <input type="checkbox" name="needs" 
+          <input type="checkbox" name="needs" id="too_fast"
                value="Class_is_moving_too_fast">Class is moving too fast<br/>
-          <input type="checkbox" name="needs"
+          <input type="checkbox" name="needs" id="quiz"
                value="Quiz_Corrections">Quiz Corrections<br/>
-          <input type="checkbox" name="needs"
+          <input type="checkbox" name="needs" id="test"
                value="Test_Retake">Test Retake<br/>
-          <input type="checkbox" name="needs"
+          <input type="checkbox" name="needs" id="other"
                value="Other">Other, please tell me more in the comments.<br/>
           <br>
 
           Comments. Please tell me more. <br> 
-          <textarea name="info" rows="5" cols="50"></textarea>
+          <textarea name="info" id="info" rows="5" cols="50" ></textarea>
           <br><br>
           What is something that you want me to know?<br>
-          <textarea name="comments" placeholder="If_you_have_any_questions_or_comments,_please_enter_them_here." rows="5"
-          cols="50">
+          <textarea name="comments" info="comments" placeholder="If_you_have_any_questions_or_comments,_please_enter_them_here." rows="5"
+          cols="50" >
           </textarea>
           <br>
-          <input type="submit" id="submit" value="Submit">
+          <button id="submit" onclick="saveForm()">Submit</button>
           <input type="reset" id="reset" value="Reset">
           <br>
         </fieldset>
