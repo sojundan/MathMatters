@@ -12,6 +12,14 @@ const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 console.log("firebase setup complete!");
 
+// make sure that data is going to firestore
+//collectionName = "test runs";
+//docName = "test run 2";
+//data = { myName: "Dan Stille", class: "Web Development" };
+//db.collection(collectionName).doc(docName).set(data);
+//console.log("data: " + data);
+//alert(docName + " saved to database!!");
+
 function buttonclicked() {
   const affirmations = [
     "I am confident in my abilities", "I believe in myself", "I am strong.", "I am capable of achieving my goals.", "I am resilient.", "I am worthy of success.", "I am deserving of success.", "I am strong.", "I am beautiful.", "I am worthy of being respected", "I can determine my future.", "I am in control", "I am amazing.", "I trust my journey.", "I can do hard things.", "I am enough", "I am proud of myself.", "I am brave.", "I can control my thoughts and responses.", "I trust myself.", "I trust me inuition.", "I honor my emotions.", "My mind and body are worthy of rest.", "It is okay to set boundaries.", "I visualize my success.", "I am grateful.", "I am a good friend.", "I am empathetic and show empathy."
@@ -37,16 +45,15 @@ function createForm() {
   var test = document.getElementById("test").value;
   var other = document.getElementById("other").value;
   var Comments = document.getElementById("info").value;
-  var N2K = document.getElementById("comments").value;
+  var N2K = document.getElementById("N2K").value;
 
 var formData = {
   timestamp: Date.now(),
-  form: form,
   First_Name: First_Name,
   Last_Name: Last_Name,
-  1_2: Period1_2,
-  3_4: Period3_4,
-  8_9: Period8_9,
+  Period1_2: Period1_2,
+  Period3_4: Period3_4,
+  Period8_9: Period8_9,
   Email: Email,
   reach_out_yes: call_yes,
   reach_out_no: call_no,
@@ -62,7 +69,8 @@ var formData = {
 
 var formJSON = JSON.stringify(formData);
 console.log("formJSON: " + formJSON);
-  db.collection("forms").doc(formData.Last_Name).set(formData);
+ // db.collection("forms").doc("Jill").set(data);
+  db.collection("forms").doc(formData.Last_Name + formData.First_Name).set(formData);
 return formData;
 };
 
@@ -70,7 +78,7 @@ function saveForm() {
   console.log("saveForm() called");
 
   var formData = createForm();
-  db.collection("forms").doc(formData.Last_Name).set(formData);
+  db.collection("forms").doc(formData.Last_Name + formData.First_Name).set(formData);
   alert("Thank you for your submission!");
 }
 
