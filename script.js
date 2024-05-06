@@ -32,9 +32,7 @@ function createForm() {
   console.log("createForm called");
   var First_Name = document.getElementById("First_Name").value;
   var Last_Name = document.getElementById("Last_Name").value;
-  var Period1_2 = document.getElementById("1_2").value;
-  var Period3_4 = document.getElementById("3_4").value;
-  var Period8_9 = document.getElementById("8_9").value;
+  var Class_Period = document.getElementById("Class_Period").value;
   var Email = document.getElementById("Email").value;
   var call_yes = document.getElementById("reach_out_yes").value;
   var call_no = document.getElementById("reach_out_no").value;
@@ -51,9 +49,7 @@ var formData = {
   timestamp: Date.now(),
   First_Name: First_Name,
   Last_Name: Last_Name,
-  Period1_2: Period1_2,
-  Period3_4: Period3_4,
-  Period8_9: Period8_9,
+  CLass_Period: Class_Period,
   Email: Email,
   reach_out_yes: call_yes,
   reach_out_no: call_no,
@@ -70,7 +66,7 @@ var formData = {
 var formJSON = JSON.stringify(formData);
 console.log("formJSON: " + formJSON);
  // db.collection("forms").doc("Jill").set(data);
-  db.collection("forms").doc(formData.Last_Name).set(formData);
+  db.collection("forms").doc(formData.Last_Name + formData.First_Name).set(formData);
 return formData;
 };
 
@@ -78,7 +74,7 @@ function saveForm() {
   console.log("saveForm() called");
 
   var formData = createForm();
-  db.collection("forms").doc(formData.Last_Name).set(formData);
+  db.collection("forms").doc(formData.Last_Name + formData.First_Name).set(formData);
   alert("Thank you for your submission!");
 }
 
